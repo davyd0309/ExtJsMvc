@@ -4,22 +4,56 @@
 Ext.define('ExtJsMvc.view.PeopleGrid', {
         extend: 'Ext.grid.Panel',
 
-
-        xtype: 'peopleGrid',
+        alias: 'widget.peopleGrid',
+        store: 'ExtJsMvc.store.People',
         title: 'Dane osób',
-        store: 'People',
+
+        iconCls: 'icon-grid',
 
         initComponent: function () {
-            var me = this;
-            this.column =
-            [
-                {text: 'Id', dataIndex: 'id'},
-                {text: 'Imię', dataIndex: 'firstName'},
-                {text: 'Nazwisko', dataIndex: 'lastName'}
+
+            this.setupColumns();
+            this.setupDockedItems();
+            this.callParent();
+
+        },
+
+        setupColumns: function () {
+            this.columns =
+                [
+                    {text: 'Id', dataIndex: 'Id'},
+                    {text: 'Imię', dataIndex: 'firstName'},
+                    {text: 'Nazwisko', dataIndex: 'lastName'}
+                ]
+
+        },
+
+        setupDockedItems: function () {
+            this.dockedItems = [
+                {
+                    xtype: 'toolbar',
+                    dock: 'top',
+                    items: [{
+                        xtype: 'button',
+                        text: 'Nowy',
+                        iconCls: 'icon-add'
+                    },
+                        {
+                            xtype: 'button',
+                            text: 'Usuń',
+                            iconCls: 'icon-delete'
+                        }
+
+                    ]
+
+                },
+                {
+                    xtype: 'pagingtoolbar',
+                    store: 'ExtJsMvc.store.People',
+                    dock: 'top',
+                    displayInfo: true
+                }
             ]
-
-            this.callParent(arguments);
-
         }
     }
 )

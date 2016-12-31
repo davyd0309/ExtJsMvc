@@ -4,10 +4,11 @@
 Ext.define('ExtJsMvc.model.Person',{
     extend:'Ext.data.Model',
 
+
     fields:[
-        {id:'id',type:'int'},
-        {firstName:'firstName',type:'string'},
-        {lastName:'lastName',type:'string'}
+        { name: 'Id', type: 'int' },
+        { name: 'firstName', type: 'string' },
+        { name: 'lastName', type: 'string' }
     ]
 
 
