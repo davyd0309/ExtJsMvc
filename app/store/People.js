@@ -4,7 +4,6 @@
 
 Ext.define('ExtJsMvc.store.People',{
     extend:'Ext.data.Store',
-
     model:'ExtJsMvc.model.Person',
 
     pageSize:10,

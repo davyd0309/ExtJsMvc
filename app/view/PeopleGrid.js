@@ -35,11 +35,13 @@ Ext.define('ExtJsMvc.view.PeopleGrid', {
                     dock: 'top',
                     items: [{
                         xtype: 'button',
+                        itemId:'add',
                         text: 'Nowy',
                         iconCls: 'icon-add'
                     },
                         {
                             xtype: 'button',
+                            itemId:'del',
                             text: 'Usuń',
                             iconCls: 'icon-delete'
                         }

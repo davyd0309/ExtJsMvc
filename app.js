@@ -16,7 +16,8 @@ Ext.application({
  extend:'Ext.app.Application',
 
  requires:[
-     'Ext.toolbar.Paging'
+     'Ext.toolbar.Paging',
+     'Ext.form.Panel',
  ],
 
  views:[],

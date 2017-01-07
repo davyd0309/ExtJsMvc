@@ -53,11 +53,13 @@ Ext.define('ExtJsMvc.view.FormEditor', {
                 {
                     xtype: 'button',
                     text: 'Zapisz',
+                    itemId:'save',
                     iconCls: 'icon-add'
                 },
                 {
                     xtype: 'button',
                     text: 'Cancel',
+                    itemId:'cancel',
                     iconCls: 'icon-delete'
                 }
 
